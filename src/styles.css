@@ -1,0 +1,379 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
+  color: white; /* Updated color scheme for better readability */
+}
+
+/* Main container styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Header and Footer styles */
+header,
+footer {
+  padding: 1rem 2rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+}
+
+/* Title styles */
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+/* Description styles */
+.description {
+  margin: 2rem 0;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+/* Grid container styles */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Card styles */
+.card {
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 10px;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
+  width: 100%;
+  max-width: 300px;
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Semi-transparent border */
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+/* Forecast day styles */
+.forecast-day {
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 10px;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
+  width: 100%;
+  max-width: 300px;
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Semi-transparent border */
+}
+
+.forecast-day:hover,
+.forecast-day:focus,
+.forecast-day:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+/* Input and button styles */
+input[type="text"],
+input[type="number"],
+button {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  color: white;
+}
+
+/* Button hover styles */
+button:hover,
+button:focus,
+button:active {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Semi-transparent background on hover */
+  cursor: pointer;
+}
+
+/* Current location button styles */
+.current-location-button {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Semi-transparent border */
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  color: white;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.current-location-button:hover,
+.current-location-button:focus,
+.current-location-button:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+/* Time-date display styles */
+#time-date {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  border-bottom-left-radius: 10px;
+  color: white;
+}
+
+/* Background image */
+body {
+  background-image: url("https://source.unsplash.com/1600x900/?weather");
+  background-size: cover;
+  background-position: center;
+  background-color: black; /* Fallback background color */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.card,
+  .forecast
+/* Update CSS for better responsiveness and visual hierarchy */
+
+/* Container styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem; /* Increase padding for better spacing */
+}
+
+/* Header and Footer styles */
+header,
+footer {
+  padding: 1rem 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%; /* Extend header and footer to full width */
+}
+
+/* Title styles */
+.title {
+  margin: 0;
+  font-size: 3rem; /* Decrease font size for better hierarchy */
+  color: #ffffff; /* Set title color to white */
+}
+
+/* Description styles */
+.description {
+  margin: 1rem 0;
+  font-size: 1.2rem; /* Decrease font size for better readability */
+  color: #cccccc; /* Set description color to light gray */
+}
+
+/* Grid container styles */
+.grid {
+  display: grid; /* Use CSS Grid for more control over layout */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive grid layout */
+  gap: 1rem;
+  max-width: 1200px; /* Limit maximum width of grid */
+  margin: 0 auto;
+}
+
+/* Card styles */
+.card {
+  padding: 1.5rem;
+  text-align: left;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  transition: transform 0.3s ease; /* Add smooth transition effect */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Add hover effect to lift card slightly */
+}
+
+/* Input and button styles */
+input[type="text"],
+input[type="number"],
+button {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+button {
+  cursor: pointer;
+  background-color: #0070f3; /* Set button background color */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darken button color on hover */
+}
+
+/* Current location button styles */
+.current-location-button {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.current-location-button:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Semi-transparent background on hover */
+}
+
+/* Time-date display styles */
+#time-date {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 0.5rem 1rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-bottom-left-radius: 10px;
+  color: #ffffff;
+}
+
+/* Background image */
+body {
+  background-image: url("https://source.unsplash.com/1600x900/?weather");
+  background-size: cover;
+  background-position: center;
+  background-color: black;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(250px, 1fr)
+    ); /* Adjust grid layout for smaller screens */
+  }
+
+  .title {
+    font-size: 2.5rem; /* Decrease font size for smaller screens */
+  }
+
+  .description {
+    font-size: 1rem; /* Decrease font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem; /* Further decrease font size for very small screens */
+  }
+
+  .description {
+    font-size: 0.9rem; /* Further decrease font size for very small screens */
+  }
+}
+/* Responsive Design CSS */
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 1rem; /* Decrease padding for smaller screens */
+  }
+
+  .title {
+    font-size: 2.5rem; /* Decrease font size for smaller screens */
+  }
+
+  .description {
+    font-size: 1rem; /* Decrease font size for smaller screens */
+  }
+
+  .grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(250px, 1fr)
+    ); /* Adjust grid layout for smaller screens */
+    gap: 1rem; /* Add gap between grid items */
+  }
+
+  .card {
+    padding: 1rem; /* Decrease padding for smaller screens */
+  }
+}
+
+/* Adjustments for even smaller screens */
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 2rem; /* Further decrease font size for very small screens */
+  }
+
+  .description {
+    font-size: 0.9rem; /* Further decrease font size for very small screens */
+  }
+}
+
+/* Fluid typography */
+body {
+  font-size: calc(0.8rem + 1vw); /* Fluid font size based on viewport width */
+}
+
+/* Fluid image size */
+img {
+  max-width: 100%; /* Ensure images resize fluidly within their containers */
+  height: auto; /* Maintain aspect ratio when resizing images */
+}
