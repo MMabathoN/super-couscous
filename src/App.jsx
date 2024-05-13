@@ -7,6 +7,7 @@ import LocationInput from "./LocationInput";
 import LoadingIndicator from "./LoadingIndicator";
 import "./styles.css";
 import Footer from "./Footer";
+import ForecastItemContainer from "./ForecastItemContainer";
 
 function WeatherSearch() {
   const [city, setCity] = useState("");
@@ -107,6 +108,7 @@ function WeatherSearch() {
         {loading && <LoadingIndicator />}
         {error && <Error message={error} />}
         {weatherData && <Results weatherData={weatherData} forecastData={forecastData} />}
+        <ForecastItemContainer/>
       <Footer/>
       </div>
     </div>
